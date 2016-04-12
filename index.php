@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>JQuery LazzyNumeric</h1>
-  <p>The lazzy plugin to format number with thousand separator on typing. This plugin extends the <b>autoNumeric</b> plugin (<a href="http://www.decorplanit.com/plugin/" target="_blank">http://www.decorplanit.com/plugin/</a>) so when the form is submitted the number format will be cleared and you don't need to do anything to clear the format at your server side script.</p>
+  <p>The plugin for the laziest web developer to format the number with thousand separator on typing. This plugin extends the <b>autoNumeric</b> plugin (<a href="http://www.decorplanit.com/plugin/" target="_blank">http://www.decorplanit.com/plugin/</a>) so when the form is submitted the number format will be cleared and you don't need to do anything to clear the format at your server side script.</p>
   <?php
   $item_name = "";
   $item_qty = "";
@@ -27,9 +27,9 @@
     echo '<pre>';
     print_r($_POST);
     echo '</pre>';
-    echo '</div>';
+    echo '</div><br/>';
   }
-  ?>  
+  ?>
   <form action="" method="post">
     <table>
       <tr><td>Item name</td><td>:</td><td><input type="text" name="item_name" value="<?php echo $item_name ?>" /></td></tr>
