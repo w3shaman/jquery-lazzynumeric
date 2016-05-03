@@ -1,6 +1,5 @@
 /**
  * jQuery Plugin for formatting thousand number to has separator
- * @version 1.1
  * @requires jQuery 1.4 or later and autoNumeric (http://www.decorplanit.com/plugin/)
  *
  * Copyright (c) 2016 Lucky
@@ -22,8 +21,15 @@
       // Get closest form element.
       _element.closest("form").submit(function() {
         _element.each(function(index) {
-          // Clean all value to be pure number before submitting.
-          $(this).val($(this).autoNumeric('get'));
+          try {
+            // Clean all value to be pure number before submitting.
+            var _obj = $(this);
+            _obj.val(_obj.autoNumeric('get'));
+          }
+          catch(e) {
+            // Do nothing on error.
+            // Error can be caused if we remove the element dynamically.
+          }
         });
         return true;
       });
