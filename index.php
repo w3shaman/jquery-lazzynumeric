@@ -22,6 +22,7 @@
     $item_price1 = $_POST["item_price1"];
     $item_price2 = $_POST["item_price2"];
 
+    // Display the posted value.
     echo '<div style="border:1px solid #999;background-color:#ddd">';
     echo 'Hooray the value is back to the pure number!';
     echo '<pre>';
@@ -40,7 +41,8 @@
     <br/>
     <input type="submit" name="submit" id="submit" />
   </form>
-  <script language="javascript" type="text/javascript">
+  <p style="font-size:16pt">JQuery LazzyNumeric can also be used safely in the dynamic table. See the example <a href="dynamic-table.php">there</a>.</p>
+  <script>
     $(".numeric").lazzynumeric();
   </script>
 </body>
