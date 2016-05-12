@@ -8,27 +8,28 @@
  */
 
 (function($) {
-  function lazzynumeric(settings, element) {
-    var _settings = settings;
-    var _element = element;
+  function lazzynumeric(options, field) {
+    var settings = options;
+    var element = field;
 
     this.initNumeric = function () {
       // Format all selected elements to have thousand separator.
-      _element.autoNumeric('init', _settings);
+      element.autoNumeric('init', settings);
     }
 
     this.cleanNumeric = function () {
       // Get closest form element.
-      _element.closest("form").submit(function() {
-        _element.each(function(index) {
+      element.closest("form").submit(function() {
+        element.each(function(index) {
           try {
             // Clean all value to be pure number before submitting.
-            var _obj = $(this);
-            _obj.val(_obj.autoNumeric('get'));
+            var obj = $(this);
+            obj.val(obj.autoNumeric('get'));
           }
           catch(e) {
             // Do nothing on error.
             // Error can be caused if we remove the element dynamically.
+            // For example we are using this plugin in dynamic table.
           }
         });
         return true;
