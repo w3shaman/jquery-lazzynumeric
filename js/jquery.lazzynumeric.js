@@ -1,5 +1,6 @@
 /**
  * jQuery Plugin for formatting thousand number to has separator
+ * @version 1.2
  * @requires jQuery 1.4 or later and autoNumeric (http://www.decorplanit.com/plugin/)
  *
  * Copyright (c) 2016 Lucky
